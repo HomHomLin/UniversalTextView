@@ -5,20 +5,27 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.lhh.utv.views.ImageEditText;
 import com.lhh.utv.views.ImageTextView;
 
 
 public class SampleActivity extends ActionBarActivity {
 
     private ImageTextView mImageTextView;
+    private ImageEditText mImageEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sample);
-        mImageTextView = (ImageTextView)this.findViewById(R.id.utv_textView);
+
+        mImageTextView = (ImageTextView)this.findViewById(R.id.utv_imagetextView);
         mImageTextView.appendText(getResources().getString(R.string.hello_utv));
         mImageTextView.appendImage(R.mipmap.ic_launcher);
+
+        mImageEditText = (ImageEditText)this.findViewById(R.id.utv_imageedittext);
+        mImageEditText.appendText(getResources().getString(R.string.hello_utv));
+        mImageEditText.appendImage(R.mipmap.ic_launcher);
     }
 
 

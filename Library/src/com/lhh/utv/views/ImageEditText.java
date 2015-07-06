@@ -12,7 +12,7 @@ import android.text.SpannableStringBuilder;
 import android.text.style.ImageSpan;
 import android.util.AttributeSet;
 import android.util.TypedValue;
-import android.widget.TextView;
+import android.widget.EditText;
 
 import com.lhh.utv.core.UtvUtil;
 import com.lhh.utv.impl.ImageImpl;
@@ -20,31 +20,33 @@ import com.lhh.utv.impl.ImageImpl;
 /**
  * Created by linhonghong on 2015/7/6.
  */
-public class ImageTextView extends TextView implements ImageImpl {
+public class ImageEditText extends EditText implements ImageImpl {
+
     private Context mContext;
     private SpannableStringBuilder mSpannableString;
     private final static int DEFAULT_SIZE_DX = 3;
 
-    public ImageTextView(Context context) {
+    public ImageEditText(Context context) {
         super(context);
         init(context);
     }
 
-    public ImageTextView(Context context, AttributeSet attrs) {
+    public ImageEditText(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(context);
     }
 
-    public ImageTextView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public ImageEditText(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context);
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    public ImageTextView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    public ImageEditText(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         init(context);
     }
+
 
     private void init(Context context){
         this.mContext = context;
